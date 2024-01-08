@@ -2031,7 +2031,7 @@
   .mantenimiento .inicio {
     max-width: 100%;
     margin: 0 auto;
-    background-image: url(/imagenes/mantenimiento.jpg);
+    background-image: url(./imagenes/mantenimiento.jpg);
     opacity: 0.9;
     background-position: center top;
     background-size: cover;
@@ -2119,7 +2119,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-image: url(/imagenes/fondo.jpg);
+    background-image: url(./imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -2153,7 +2153,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-image: url(/imagenes/fondo2.jpg);
+    background-image: url(./imagenes/fondo2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -2187,7 +2187,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-image: url(/imagenes/fondo.jpg);
+    background-image: url(./imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -2221,7 +2221,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-image: url(/imagenes/fondo2.jpg);
+    background-image: url(./imagenes/fondo2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -2255,7 +2255,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-image: url(/imagenes/fondo.jpg);
+    background-image: url(./imagenes/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -2276,7 +2276,7 @@
   .empresa .inicio {
     max-width: 100%;
     margin: 0 auto;
-    background-image: url(/imagenes/Banner_Paradigmas.png);
+    background-image: url(./imagenes/Banner_Paradigmas.png);
     opacity: 0.9;
     background-position: center top;
     background-size: cover;
@@ -2345,7 +2345,7 @@
   .empresa .do .do__inicio {
     max-width: 100%;
     margin: 0 auto;
-    background-image: url(/imagenes/Banner_Paradigmas.png);
+    background-image: url(./imagenes/Banner_Paradigmas.png);
     opacity: 0.9;
     background-position: center top;
     background-size: cover;
@@ -2469,7 +2469,7 @@
   .empresa .start__banner {
     max-width: 100%;
     margin: 0 auto;
-    background-image: url(/imagenes/Banner_Paradigmas.png);
+    background-image: url(./imagenes/Banner_Paradigmas.png);
     opacity: 0.9;
     background-position: center top;
     background-size: cover;
