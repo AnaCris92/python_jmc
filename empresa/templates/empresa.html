@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html >
 <html> 
   <head>
@@ -30,9 +30,9 @@
   </head>
   <body> 
     <header>
-      <div class="menu-top"> <a class="menu-top__link" href="https://jmcsoluciones.com/privacidad/">Aviso de Privacidad</a><a class="menu-top__link" href="https://jmcsoluciones.com/webmail" id="ocultar">Webmail </a><a class="menu-top__link" href="https://store.jmcsoluciones.com/" id="ocultar">Tienda</a><a class="menu-top__link" href="https://jmcsoluciones.com/cpanel" id="ocultar">Cpanel</a><a class="menu-top__link" href="login.html">Login <img src="imagenes/login.svg" alt="icono de login" id="login"/></a></div>
+      <div class="menu-top"> <a class="menu-top__link" href="https://jmcsoluciones.com/privacidad/">Aviso de Privacidad</a><a class="menu-top__link" href="https://jmcsoluciones.com/webmail" id="ocultar">Webmail </a><a class="menu-top__link" href="https://store.jmcsoluciones.com/" id="ocultar">Tienda</a><a class="menu-top__link" href="https://jmcsoluciones.com/cpanel" id="ocultar">Cpanel</a><a class="menu-top__link" href="login.html">Login <img src="{% static 'css/imagenes/login.svg' %}" alt="icono de login" id="login"/></a></div>
       <nav class="menu"> 
-        <section class="menu__container"><a href="index.html"> <img class="menu__logo" src="{% static 'imagenes/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
+        <section class="menu__container"><a href="index.html"> <img class="menu__logo" src="{% static 'css/imagenes/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
           <ul class="menu__links"> 
             <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
             <li class="menu__item"> <a class="menu__link" href="empresa.html">Empresa</a></li>
@@ -40,7 +40,7 @@
             <li class="menu__item"> <a class="menu__link" href="menuAspel.html">Aspel</a></li>
             <li class="menu__item"> <a class="menu__link" href="mantenimiento.html">Mantenimiento</a></li>
           </ul>
-          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/imagenes/menu.svg''}" alt="icono de menu" id="menu"/></div>
+          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/imagenes/menu.svg'%}" alt="icono de menu" id="menu"/></div>
         </section>
       </nav>
     </header>
@@ -174,7 +174,7 @@
               </div>
             </div>
             <div class="footer__box__body__contacto-redes">
-              <div class="footer__box__body__contacto-redes-icon"><a href="https://www.facebook.com/jmcsoluciones"> <img src="{% static 'css/Images/Icons/facebook-icon.svg" alt="Ícono de facebook" id="logoFacebook' %}"/></a></div>
+              <div class="footer__box__body__contacto-redes-icon"><a href="https://www.facebook.com/jmcsoluciones"> <img src="{% static 'css/Images/Icons/facebook-icon.svg' %}" alt="Ícono de facebook" id="logoFacebook"/></a></div>
               <div class="footer__box__body__contacto-redes-txt">
                 <p>JMC Soluciones</p>
               </div>
