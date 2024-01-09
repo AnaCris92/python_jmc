@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'index',
     'empresa',
     'SWeb',
+    'aspel',
 ]
 
 MIDDLEWARE = [

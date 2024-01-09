@@ -22,4 +22,5 @@ urlpatterns = [
     path('index/',include('index.urls')),
     path('empresa/',include('empresa.urls')),
     path('SWeb/',include('SWeb.urls')),
+    path('aspel/',include('aspel.urls')),
 ]
