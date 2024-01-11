@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def SWeb(request):
-    return render(request,"SWeb.html")
+def sWeb(request):
+    return render(request,"sWeb.html")
