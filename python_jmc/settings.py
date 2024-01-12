@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'empresa',
     'mantenimiento',
     'sWeb',
+    'menuAspel',
 ]
 
 MIDDLEWARE = [

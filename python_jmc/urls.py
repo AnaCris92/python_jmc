@@ -23,4 +23,5 @@ urlpatterns = [
     path('empresa/',include('empresa.urls')),
     path('mantenimiento/',include('mantenimiento.urls')),
     path('sWeb/',include('sWeb.urls')),
+    path('menuAspel/',include('menuAspel.urls')),
 ]
