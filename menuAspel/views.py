@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -12,3 +13,18 @@ def coi(request):
 
 def noi(request):
     return render(request, "noi.html")
+
+def adm(request):
+    return render(request, "adm.html")
+
+def caja(request):
+    return render(request, "caja.html")
+
+def prod(request):
+    return render(request, "prod.html")
+
+def facture(request):
+    return render(request, "facture.html")
+
+def banco(request):
+    return render(request, "banco.html")
