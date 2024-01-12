@@ -26,4 +26,5 @@ urlpatterns = [
     path('menuAspel/',include('menuAspel.urls')),
     path('sae/',include('sae.urls')),
     path('coi/',include('coi.urls')),
+    path('noi/',include('noi.urls')),
 ]

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'menuAspel',
     'sae',
     'coi',
+    'noi',
 ]
 
 MIDDLEWARE = [

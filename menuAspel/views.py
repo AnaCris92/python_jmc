@@ -9,3 +9,6 @@ def sae(request):
 
 def coi(request):
     return render(request, "coi.html")
+
+def noi(request):
+    return render(request, "noi.html")
