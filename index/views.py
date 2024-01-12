@@ -10,4 +10,6 @@ def empresa(request):
 def mantenimiento(request):
     return render(request, "mantenimiento.html")
 
+def sWeb(request):
+    return render(request, "sWeb.html")
  

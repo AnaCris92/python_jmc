@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, empresa, mantenimiento
+from .views import index, empresa, mantenimiento, sWeb
 
 #vistas
 from . import views
@@ -8,4 +8,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('empresa/', empresa, name='empresa'),
     path('mantenimiento/', mantenimiento, name='mantenimiento'),
+    path('sWeb/', sWeb, name='sWeb'),
 ]

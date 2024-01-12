@@ -30,7 +30,7 @@
   </head>
   <body> 
     <header>
-      <div class="menu-top"> <a class="menu-top__link" href="https://jmcsoluciones.com/privacidad/">Aviso de Privacidad</a><a class="menu-top__link" href="https://jmcsoluciones.com/webmail" id="ocultar">Webmail </a><a class="menu-top__link" href="https://store.jmcsoluciones.com/" id="ocultar">Tienda</a><a class="menu-top__link" href="https://jmcsoluciones.com/cpanel" id="ocultar">Cpanel</a><a class="menu-top__link" href="login.html">Login <img src="imagenes/login.svg" alt="icono de login" id="login"/></a></div>
+      <div class="menu-top"> <a class="menu-top__link" href="https://jmcsoluciones.com/privacidad/">Aviso de Privacidad</a><a class="menu-top__link" href="https://jmcsoluciones.com/webmail" id="ocultar">Webmail </a><a class="menu-top__link" href="https://store.jmcsoluciones.com/" id="ocultar">Tienda</a><a class="menu-top__link" href="https://jmcsoluciones.com/cpanel" id="ocultar">Cpanel</a><a class="menu-top__link" href="login.html">Login <img src="{% static 'css/imagenes/login.svg' %}" alt="icono de login" id="login"/></a></div>
       <nav class="menu"> 
         <section class="menu__container"><a href="index.html"> <img class="menu__logo" src="{% static 'css/imagenes/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
           <ul class="menu__links"> 
@@ -40,32 +40,151 @@
             <li class="menu__item"> <a class="menu__link" href="menuAspel.html">Aspel</a></li>
             <li class="menu__item"> <a class="menu__link" href="mantenimiento.html">Mantenimiento</a></li>
           </ul>
-          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/imagenes/menu.svg'%}" alt="icono de menu" id="menu"/></div>
+          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/imagenes/menu.svg' %}" alt="icono de menu" id="menu"/></div>
         </section>
       </nav>
     </header>
-    <div class="aspel"> 
-      <div class="info"><img src="{% static '/Images/logo-aspel.svg' %}" alt=""/>
-        <h2>¿Qué es aspel?</h2>
-        <p>Los sistemas Aspel buscan eficientizar y automatizar procesos para micro, medianas y grandes empresas. Permitiendo simplificar las tareas administrativas, de contabilidad, facturación y nómina de la empresa e integrarlas a nuevas tecnologías.</p>
+    <div class="sWeb">  
+      <div class="desarrollo">  
+        <div class="desarrollo__dominios"> <img src="{% static 'css/imagenes/dominios.png' %}" alt="logo dominios"/>
+          <div class="desarrollo__dominios__box">
+            <div class="desarrollo__dominios__box-title"> 
+              <h2>Dominios</h2>
+            </div>
+            <div class="desarrollo__dominios__box-txt"> 
+              <p><strong>Registra</strong> el nombre de tu empresa u organización, nosotros te ayudamos.</p>
+            </div><!-- HOSTING -->
+          </div>
+        </div>
+        <div class="desarrollo__hosting"><img src="{% static 'css/imagenes/dominios.png' %}" alt="hosting"/>
+          <div class="desarrollo__hosting__box">
+            <div class="desarrollo__hosting__box-title">
+              <h2>Hosting</h2>
+            </div>
+            <div class="desarrollo__hosting__box-txt"> 
+              <p>Hosting extremadamente <strong>rápido</strong> y lleno de <strong>funciones</strong>  </p><!-- CORREO -->         
+            </div>
+          </div>
+        </div>
+        <div class="desarrollo__correo"><img src="{% static 'css/imagenes/correo.png' %}" alt="correo electrónico"/>
+          <div class="desarrollo__correo__box">
+            <div class="desarrollo__correo__box-title">
+              <h2>Correo <strong>electrónico</strong></h2>
+            </div>
+            <div class="desarrollo__correo__box-txt"> 
+              <p>Usa <strong>cuentas profesionales</strong> con tu propio dominio </p>
+            </div>
+          </div><!-- PAGINA -->                   
+        </div>
+        <div class="desarrollo__pagina"><img src="{% static 'css/imagenes/dominios.png' %}
+          " alt="página web"/>
+          <div class="desarrollo__pagina__box">
+            <div class="desarrollo__pagina__box-title">
+              <h2>Creamos tu <strong>página web</strong></h2>
+            </div>
+            <div class="desarrollo__pagina__box-txt"> 
+              <p><strong>Desarrollamos</strong> tu página web <strong>a la medida</strong></p>
+            </div><!-- SERVIDORES --> 
+          </div>
+        </div>
+        <div class="desarrollo__servidores"><img src="{% static 'css/imagenes/dominios.png' %}" alt="servidores"/>
+          <div class="desarrollo__servidores__box">
+            <div class="desarrollo__servidores__box-title">
+              <h2><strong>Servidores</strong>    </h2>
+            </div>
+            <div class="desarrollo__servidores__box-txt"> 
+              <p>Nos encargamos de implementar la <strong>arquitectura </strong> que necesites para poner en marcha tus aplicaciones</p>
+            </div><!-- APLICACIONES -->
+          </div>
+        </div>
+        <div class="desarrollo__aplicaciones"><img src="{% static 'css/imagenes/dominios.png' %}" alt="aplicaciones"/>
+          <div class="desarrollo__aplicaciones__box">
+            <div class="desarrollo__aplicaciones__box-title">
+              <h2><strong>Aplicaciones</strong> a la medida    </h2>
+            </div>
+            <div class="desarrollo__aplicaciones__box-txt"> 
+              <p><strong>Desarrollamos</strong> aplicaciones a la medida, Android, iOS, Escritorio o Web</p>
+            </div>
+          </div><!-- TIENDA ONLINE -->
+        </div>
+        <div class="desarrollo__tienda"><img src="{% static 'css/imagenes/dominios.png'%}" alt="tienda"/>
+          <div class="desarrollo__tienda__box">
+            <div class="desarrollo__tienda__box-title">
+              <h2><strong>Tienda</strong> en línea de computación   </h2>
+            </div>
+            <div class="desarrollo__tienda__box-txt"> 
+              <p>Encuentra los <strong>mejores equipos</strong> para tu empresa u organización </p><!-- SOPORTE INFORMATICO -->
+            </div>
+          </div>
+        </div>
+        <div class="desarrollo__informatico"><img src="{% static 'css/imagenes/dominios.png' %}" alt="soporte informatico"/>
+          <div class="desarrollo__informatico__box">
+            <div class="desarrollo__informatico__box-title">
+              <h2><strong>Soporte</strong> informático     </h2>
+            </div>
+            <div class="desarrollo__informatico__box-txt"> 
+              <p><strong>Mantenimiento</strong> preventivo y correctivo a equipos de cómputo </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="logos">
-        <div class="logos__SAE"> <a href="sae.html"> 
-            <p>Aspel SAE</p><img src="{% static '/Images/SAE.png' %}" alt="Más informacion sobre el sistema Aspel SAE" title="Controla el ciclo de las operaciones de compra y venta de toda su empresa."/></a></div>
-        <div class="logos__COI"> <a href="coi.html"> 
-            <p>Aspel COI</p><img src="{% static '/Images/COI.png' %}" alt="Más informacion sobre el sistema Aspel COI" title="Lleva de manera precisa y segura toda la contabilidad de tu empresa."/></a></div>
-        <div class="logos__NOI"><a href="noi.html"> 
-            <p>Aspel NOI</p><img src="{% static '/Images/NOI.png' %}" alt="Más informacion sobre el sistema Aspel NOI" title="Controla todos los elementos de tu nómina"/></a></div>
-        <div class="logos__CAJA"><a href="caja.html"> 
-            <p>Aspel CAJA</p><img src="{% static '/Images/CAJA.png' %}" alt="Más informacion sobre el sistema Aspel CAJA" title="Convierte tu equipo de cómputo en un punto de venta"/></a></div>
-        <div class="logos__ADM"><a href="adm.html"> 
-            <p>Aspel ADM</p><img src="{% static '/Images/ADM.png' %}" alt="Más informacion sobre el sistema Aspel ADM" title="Administra operaciones de compra, venta en cada una de las empresas que manejamos desde la nube"/></a></div>
-        <div class="logos__PROD"><a href="prod.html"> 
-            <p>Aspel PROD</p><img src="{% static '/Images/PROD.png' %}" alt="Más informacion sobre el sistema Aspel PROD" title="Controla y la planea todos los procesos de fabricación de tus productos"/></a></div>
-        <div class="logos__FACTURE"><a href="facture.html"> 
-            <p>Aspel FACTURE</p><img src="{% static '/Images/FACT.png' %}" alt="Más informacion sobre el sistema Aspel FACTURE" title="Da de alta facturas y todo tipo de comprobantes fiscales digitales (CFDI)."/></a></div>
-        <div class="logos__BANCO"><a href="banco.html"> 
-            <p>Aspel BANCO</p><img src="{% static '/Images/BANCO.png' %}" alt="Más informacion sobre el sistema Aspel BANCO" title="Controla cualquiera de los movimientos bancarios de tu empresa"/></a></div>
+      <button class="btn btn-info newBtnElement" id="infobtn" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo">?</button>
+      <div class="modal-info">
+        <div class="modal" id="modalInfo" aria-hidden="true" aria-labelledby="modalInfo-gralLabel" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="modalInfoLabel">Solicita más <strong>información</strong></h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="content-form">
+                  <form action="">
+                    <div class="form-floating mb-3"> 
+                      <input class="form-control form-control-lg" placeholder="Nombre" type="text" name="nombre" maxlength="80" required="required"/>
+                      <label class="form-label" for="nombre">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control form-control-lg" placeholder="Telefono" type="text" name="telefono" maxlength="10" required="required"/>
+                      <label class="form-label" for="telefono">Telefono</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control form-control-lg" placeholder="Correo" type="email" name="correo" maxlength="50" required="required"/>
+                      <label class="form-label" for="correo">Correo  </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control form-control-lg" placeholder="Nombre de la empresa" type="text" name="empresa" maxlength="50"/>
+                      <label class="form-label" for="empresa">Nombre de la empresa   </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control form-control-lg" placeholder="Mensaje" type="text" name="mensaje" maxlength="600" required="required"/>
+                      <label class="form-label" for="mensaje">Mensaje </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-body__buttons"> 
+                  <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                  <button class="btn btn-success" data-bs-target="#modalInfoCompleta" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalInfoCompleta" aria-hidden="true" aria-labelledby="modalInfoCompleta" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="modalInfoCompleta">Solicitud de Información </h2>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">Informacion enviada!</div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#modalInfoCompleta" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -77,26 +196,26 @@
               <h3 id="call">Llámanos </h3>
             </div>
             <div class="footer__box__body__contacto-phone"> 
-              <div class="footer__box__body__contacto-phone-img"> <img src="{% static '/Images/Icons/telefono-icono.svg'%}" alt="icono de telefono"/></div>
+              <div class="footer__box__body__contacto-phone-img"> <img src="{% static 'css/Images/Icons/telefono-icono.svg' %}" alt="icono de telefono"/></div>
               <div class="footer__box__body__contacto-phone-num"> 
                 <p>449 386 2691 </p>
               </div>
             </div>
             <div class="footer__box__body__contacto-email">
-              <div class="footer__box__body__contacto-email-img"><img src="{% static '/Images/Icons/mail-icono.svg'%}" alt="icono de correo"/></div>
+              <div class="footer__box__body__contacto-email-img"><img src="{% static 'css/Images/Icons/mail-icono.svg' %}" alt="icono de correo"/></div>
               <div class="footer__box__body__contacto-email-direccion"> 
                 <p>proyectos@jmcsoluciones.com</p>
               </div>
             </div>
             <div class="footer__box__body__contacto-redes">
-              <div class="footer__box__body__contacto-redes-icon"><a href="{% static 'https://www.facebook.com/jmcsoluciones'%}"> <img src="/Images/Icons/facebook-icon.svg" alt="Ícono de facebook" id="logoFacebook"/></a></div>
+              <div class="footer__box__body__contacto-redes-icon"><a href="https://www.facebook.com/jmcsoluciones"> <img src="{% static 'css/Images/Icons/facebook-icon.svg'%}" alt="Ícono de facebook" id="logoFacebook"/></a></div>
               <div class="footer__box__body__contacto-redes-txt">
                 <p>JMC Soluciones</p>
               </div>
             </div>
           </div>
           <div class="footer__box__body__logo"> 
-            <div class="footer__box__body__logo-img"> <img src="{% static '/Images/Icons/jmc.svg'%}" alt="LogoJMC" id="logoJMC"/></div>
+            <div class="footer__box__body__logo-img"> <img src="{% static 'css/Images/Icons/jmc.svg' %}" alt="LogoJMC" id="logoJMC"/></div>
           </div>
           <div class="footer__box__body__enlaces">
             <ul> 
@@ -108,7 +227,7 @@
             </ul>
           </div>
           <div class="footer__box__body__ubicacion"> 
-            <div class="footer__box__body__ubicacion-img"> <img src="{% static '/Images/Icons/ubicacion-icon.svg'%}" alt="ícono de ubicación" id="logoUbicacion"/></div>
+            <div class="footer__box__body__ubicacion-img"> <img src="{% static 'css/Images/Icons/ubicacion-icon.svg'%}" alt="ícono de ubicación" id="logoUbicacion"/></div>
             <div class="footer__box__body__ubicacion-txt">
               <p>Juan de la Barrera #108-B, Col. Héroes, CP.20190 Aguascalientes,Ags.            </p>
             </div>
