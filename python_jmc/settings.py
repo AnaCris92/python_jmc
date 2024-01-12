@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'mantenimiento',
     'sWeb',
     'menuAspel',
+    'sae',
 ]
 
 MIDDLEWARE = [
