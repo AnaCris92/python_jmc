@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'sWeb',
     'menuAspel',
     'sae',
+    'coi',
 ]
 
 MIDDLEWARE = [

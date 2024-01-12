@@ -6,3 +6,6 @@ def menuAspel(request):
 
 def sae(request):
     return render(request, "sae.html")
+
+def coi(request):
+    return render(request, "coi.html")

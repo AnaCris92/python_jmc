@@ -12,4 +12,7 @@ def mantenimiento(request):
 
 def sWeb(request):
     return render(request, "sWeb.html")
+
+def menuAspel(request):
+    return render(request, "menuAspel.html")
  

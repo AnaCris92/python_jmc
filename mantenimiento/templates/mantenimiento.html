@@ -34,11 +34,11 @@
       <nav class="menu"> 
         <section class="menu__container"><a href="index.html"> <img class="menu__logo" src="{% static 'css/imagenes/logo.png'%}" alt="Logo de la empresa" id="logo"/></a>
           <ul class="menu__links"> 
-            <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
-            <li class="menu__item"> <a class="menu__link" href="empresa.html">Empresa</a></li>
-            <li class="menu__item"> <a class="menu__link" href="sWeb.html">Soluciones Web </a></li>
-            <li class="menu__item"> <a class="menu__link" href="menuAspel.html">Aspel</a></li>
-            <li class="menu__item"> <a class="menu__link" href="mantenimiento.html">Mantenimiento</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'index' %}">Inicio</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'empresa' %}">Empresa</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'sWeb' %}">Soluciones Web </a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'menuAspel' %}">Aspel</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'mantenimiento' %}">Mantenimiento</a></li>
           </ul>
           <div class="menu__hamburger"> <img class="menu__img" src="{%static 'css/imagenes/menu.svg'%}" alt="icono de menu" id="menu"/></div>
         </section>

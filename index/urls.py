@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, empresa, mantenimiento, sWeb
+from .views import index, empresa, mantenimiento, sWeb, menuAspel
 
 #vistas
 from . import views
@@ -9,4 +9,5 @@ urlpatterns = [
     path('empresa/', empresa, name='empresa'),
     path('mantenimiento/', mantenimiento, name='mantenimiento'),
     path('sWeb/', sWeb, name='sWeb'),
+    path('menuAspel/', menuAspel, name='menuAspel'),
 ]
