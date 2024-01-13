@@ -24,4 +24,5 @@ urlpatterns = [
     path('mantenimiento/',include('mantenimiento.urls')),
     path('sWeb/',include('sWeb.urls')),
     path('menuAspel/',include('menuAspel.urls')),
+    path('login/',include('login.urls')),
 ]

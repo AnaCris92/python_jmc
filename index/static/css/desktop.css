@@ -2043,13 +2043,13 @@ header nav.menu .menu__links .menu__item .menu__link {
 }
 
 .login__item img {
-    width: 30px;
+    width: 35px;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    left: 550px;
+    left: 890px;
     margin: 0px 0px 15px;
     padding-top: 5px
 }
