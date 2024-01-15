@@ -4,3 +4,6 @@ from django.shortcuts import render
 def inicioAdmin(request):
     return render(request,"inicioAdmin.html")
 
+def control_clientes(request):
+    return render(request, "control_clientes.html")
+
