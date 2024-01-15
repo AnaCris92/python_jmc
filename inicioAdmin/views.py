@@ -12,3 +12,6 @@ def control_contratos(request):
 
 def control_soporte(request):
     return render(request, "control_soporte.html")
+
+def control_pagos(request):
+    return render(request, "control_pagos.html")
