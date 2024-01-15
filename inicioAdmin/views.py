@@ -15,3 +15,6 @@ def control_soporte(request):
 
 def control_pagos(request):
     return render(request, "control_pagos.html")
+
+def control_ajuste(request):
+    return render(request, "control_ajuste.html")

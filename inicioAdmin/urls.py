@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import control_clientes, control_contratos, control_soporte
+from .views import control_clientes, control_contratos, control_soporte, control_ajuste
 
 
 #vistas
@@ -10,4 +10,6 @@ urlpatterns = [
     path('control_contratos/',views.control_contratos, name= 'control_contratos'),
     path('control_soporte/',views.control_soporte, name= 'control_soporte'),
     path('control_pagos/',views.control_pagos, name= 'control_pagos'),
+    path('control_ajuste/',views.control_ajuste, name= 'control_ajuste'),
+
 ]
