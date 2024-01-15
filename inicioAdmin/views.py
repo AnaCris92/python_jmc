@@ -9,3 +9,6 @@ def control_clientes(request):
 
 def control_contratos(request):
     return render(request, "control_contratos.html")
+
+def control_soporte(request):
+    return render(request, "control_soporte.html")
