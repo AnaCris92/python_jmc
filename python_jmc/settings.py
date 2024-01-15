@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'sWeb',
     'menuAspel',
     'login',
+    'inicioAdmin',
+
   
 ]
 

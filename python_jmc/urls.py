@@ -25,4 +25,5 @@ urlpatterns = [
     path('sWeb/',include('sWeb.urls')),
     path('menuAspel/',include('menuAspel.urls')),
     path('login/',include('login.urls')),
+    path('inicioAdmin/',include('inicioAdmin.urls')),
 ]
