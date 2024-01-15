@@ -7,3 +7,5 @@ def inicioAdmin(request):
 def control_clientes(request):
     return render(request, "control_clientes.html")
 
+def control_contratos(request):
+    return render(request, "control_contratos.html")
