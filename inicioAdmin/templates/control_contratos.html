@@ -37,9 +37,8 @@
           <ul class="menu__links">
             <li class="menu__item"><a class="menu__link" href="{% url 'inicioAdmin' %}">Inicio</a></li>
             <li class="menu__item"><a class="menu__link" href="contratos-client.html">Contratos</a></li>
-            <li class="menu__item"> <a class="menu__link" href="pagos-cliente.html">Pagos</a></li>
-            <li class="menu__item"> <a class="menu__link" href="tickets-cliente.html">Tickets </a></li>
-            <li class="menu__item"><a class="menu__link" href="equipo-cliente.html">Equipos</a></li>
+            <li class="menu__item"> <a class="menu__link" href="pagos_cliente.html">Pagos</a></li>            <li class="menu__item"> <a class="menu__link" href="{% url 'tickets_cliente'%}'">Tickets </a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'equipo_cliente'%}">Equipos</a></li>
           </ul>
           <div class="menu__hamburger"><img class="menu__img" src="{% static 'css/imagenes/menu.svg'%}" alt="icono de menu" id="menu"/></div>
         </section>
@@ -48,10 +47,10 @@
     <div class="controlMenuAdmin"> 
       <div class="controlMenuAdmin__box">
         <div class="controlMenuAdmin__box__item"><a href="{% url 'control_clientes' %}">Clientes<img src="{% static 'css/Images/Icons/clientes.svg' %}" alt=""/></a></div>
-        <div class="controlMenuAdmin__box__item"> <a href="control-soporte.html">Soporte<img src="{% static 'css/Images/Icons/soporte.svg' %}" alt=""/></a></div>
-        <div class="controlMenuAdmin__box__item"><a href="control-pagos.html">Pagos<img src="{% static 'css/Images/Icons/pagos.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"> <a href="{% url 'control_soporte' %}">Soporte<img src="{% static 'css/Images/Icons/soporte.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_pagos' %}">Pagos<img src="{% static 'css/Images/Icons/pagos.svg' %}" alt=""/></a></div>
         <div class="controlMenuAdmin__box__item"><a href="{% url 'control_contratos' %}">Contratos<img src="{% static 'css/Images/Icons/contratos.svg' %}" alt=""/></a></div>
-        <div class="controlMenuAdmin__box__item"><a href="control-ajuste.html">Ajustes<img src="{% static 'css/Images/Icons/ajustes.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_ajuste' %}">Ajustes<img src="{% static 'css/Images/Icons/ajustes.svg' %}" alt=""/></a></div>
       </div>
     </div>
     <div class="ctrlContratos"> 
@@ -401,7 +400,7 @@
           </div>
         </div>
       </div>
-      <script src="../js/inicio.js"></script>
+      <script src="{% static 'css/js/inicio.js' %}"></script>
       <script>
         $(document).ready( function () {
         $('#myTable').DataTable();

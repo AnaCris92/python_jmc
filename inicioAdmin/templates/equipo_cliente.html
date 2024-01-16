@@ -36,10 +36,10 @@
       <nav class="menu"> 
         <section class="menu__container"> <a href="{% url 'inicioAdmin'%}'"><img class="menu__logo" src="{% static 'css/imagenes/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
           <ul class="menu__links">
-            <li class="menu__item"><a class="menu__link" href="{% url 'inicioAdmin'%}'">Inicio</a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'inicioAdmin'%}">Inicio</a></li>
             <li class="menu__item"><a class="menu__link" href="contratos-cliente.html">Contratos</a></li>
-            <li class="menu__item"> <a class="menu__link" href="pagos-cliente.html">Pagos</a></li>
-            <li class="menu__item"> <a class="menu__link" href="tickets-cliente.html">Tickets </a></li>
+            <li class="menu__item"> <a class="menu__link" href="pagos_cliente.html">Pagos</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'tickets_cliente'%}'">Tickets </a></li>
             <li class="menu__item"><a class="menu__link" href="{% url 'equipo_cliente'%}">Equipos</a></li>
           </ul>
           <div class="menu__hamburger"><img class="menu__img" src="imagenes/menu.svg" alt="icono de menu" id="menu"/></div>
