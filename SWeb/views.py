@@ -16,5 +16,4 @@ def mantenimiento(request):
 def menuAspel(request):
     return render(request, "menuAspel.html")
 
-def login(request):
-    return render(request, "login.html")
+
