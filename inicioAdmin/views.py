@@ -18,3 +18,9 @@ def control_pagos(request):
 
 def control_ajuste(request):
     return render(request, "control_ajuste.html")
+
+def equipo_cliente(request):
+    return render(request, "equipo_cliente.html")
+
+def tickets_cliente(request):
+    return render(request, "tickets_cliente.html")
