@@ -77,9 +77,9 @@ ul {
 }
 
 .menu__link {
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 400;
+    color: #000000 !important;
+    font-size: 1.8rem;
+    font-weight: 600;
     text-decoration: none;
     padding: 0 30px;
     display: -webkit-box;

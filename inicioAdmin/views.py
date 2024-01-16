@@ -24,3 +24,9 @@ def equipo_cliente(request):
 
 def tickets_cliente(request):
     return render(request, "tickets_cliente.html")
+
+def contratos_cliente(request):
+    return render(request, "contratos_cliente.html")
+
+def pagos_cliente(request):
+    return render(request, "pagos_cliente.html")
