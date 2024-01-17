@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-def login(request):
-    return render(request,"login.html")
 
 def index(request):
     return render(request,"index.html")
@@ -15,6 +13,9 @@ def mantenimiento(request):
 
 def menuAspel(request):
     return render(request, "menuAspel.html")
+
+def login(request):
+    return render(request,"login.html")
 
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -35,7 +36,7 @@ def login_user(request):
             return redirect('inicioAdmin')
         else:
             # El usuario no es autenticado, mostrar un mensaje de error
-            messages.error(request, 'El nombre de usuario o contrseña no son correctos.')
+            messages.warning(request, 'El nombre de usuario o contrseña no son correctos.')
             return redirect('login')
 
     else:

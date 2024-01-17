@@ -30,3 +30,6 @@ def contratos_cliente(request):
 
 def pagos_cliente(request):
     return render(request, "pagos_cliente.html")
+
+def control_staff(request):
+    return render(request, "control_staff.html")

@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
   }
+  .message,
+  .alert-warning{
+    background-color: red;
+  }
   html {
     font-size: 62.5%;
   }
