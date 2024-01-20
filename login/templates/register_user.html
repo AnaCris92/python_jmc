@@ -42,28 +42,18 @@
         </section>
       </nav>
     </header>
-    <div class="login">
-        <div class="login__container"><img src="{% static 'css/Images/Icons/usuario.svg' %}"/>
-          <h1>Sing in</h1>
-          <form action="#" method="post"></form>
-        </div>
-        <div class="login__item"><!-- caja de E-mail -->
-          <label for="e-mail">E-mail</label><img src="{% static 'css/Images/Icons/email-login.svg' %}"/>
-          <input type="email" name="email" placeholder="Enter your E-mail"/><!-- caja de password -->
-          <label for="password">Password</label><img src="{% static 'css/Images/Icons/password.svg'%}"/>
-          <input type="password" id="password" name="password" placeholder="Enter your password"/><!-- boto de ingresar--><a href="{% url 'inicioAdmin' %}">
-            <button type="submit">Ingresar</button></a><!-- boto de ingresar-->
-        </div>
-        <div class="login__remember">
-          <!-- Checkbox-->
-          <div class="form-check">
-            <input id="check-input" type="checkbox" value="" checked=""/>
-            <label class="form-check-label" for="form"> Remember me </label>
-          </div>
-          <div class="col"></div><!--Simple link--><a href="#!">Forgot password?</a>
-        </div>
-      </div>
-      <footer>
+    <h2>Registro de Usuario</h2>
+    <form method="post" action="{% url 'register_user' %}">
+        
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" name="username" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" required>
+        
+        <button type="submit">Registrar</button>
+    </form>
+    <footer>
         <div class="footer__box">
           <div class="footer__box__body">
             <div class="footer__box__body__contacto">

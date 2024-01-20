@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+#Django settings
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('index.urls')),
@@ -26,4 +30,5 @@ urlpatterns = [
     path('menuAspel/',include('menuAspel.urls')),
     path('login/',include('login.urls')),
     path('inicioAdmin/',include('inicioAdmin.urls')),
+    path('inicio_cliente/',include('inicio_cliente.urls')),
 ]
