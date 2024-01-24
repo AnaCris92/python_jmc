@@ -5,6 +5,4 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('',views.sWeb, name='sWeb'),
-   
-
 ]

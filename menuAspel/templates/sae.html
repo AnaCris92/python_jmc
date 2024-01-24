@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{%static 'css/tablet.css' %}" media="screen and (min-width: 768px)"/>
     <link rel="stylesheet" href="{%static 'css/desktop.css' %}" media="screen and (min-width: 1024px)"/>
     <link rel="stylesheet" href="{%static 'css/menu.css' %}"/>
-    <link rel="shortcut icon" href="images/favIcon.png"/>
+    <link rel="shortcut icon" href="{% static 'css/Images/favIcon.png' %}"/>
     <!-- Bootstrap y dependencias-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <!-- jQuery y Bootstrap Bundle-->
@@ -63,7 +63,7 @@
           <li><a href="banco.html"> <img src="{%static 'css/Images/BANCO.png' %}" alt="Aspel BANCO"/></a></li>
           <div class="desarrollo__inicio-logo"> <img src="{%static 'css/Images/SAE.png'%}" alt=""/></div>
           <div class="desarrollo__inicio-video"> 
-            <video src="/videos/Nuevo Aspel SAE - Digitaliza tu empresa y empieza a vender en línea.mp4" controls="controls"> </video>
+            <video src="{% static 'css/videos/Nuevo Aspel SAE - Digitaliza tu empresa y empieza a vender en línea.mp4' %}" controls="controls"> </video>
           </div>
         </div>
         <div class="desarrollo__button">
@@ -143,7 +143,7 @@
               </ul>
             </div>
             <div class="tab-pane fade" id="tienda-tab-pane" role="tabpanel" aria-labelledby="tienda-tab" tabindex="0">
-              <div class="desarrollo__imagenes"> <img src="{%static 'css/Images/mercado_libre.png'%}" alt="Mercado Libre"/><img src="/Images/Claro-Shop.png" alt="Claro Shop"/></div>
+              <div class="desarrollo__imagenes"> <img src="{%static 'css/Images/mercado_libre.png'%}" alt="Mercado Libre"/><img src="{% static 'css/Images/Claro-Shop.png' %}" alt="Claro Shop"/></div>
               <div class="desarrollo__informacion"> 
                 <div class="desarrollo__informacion-online"> <img src="{%static 'css/Images/Icons/venta online.svg'%}" alt="venta en linea"/>
                   <p>Publica fácilmente y sin costo tus productos para iniciar la venta en línea.</p>
@@ -269,6 +269,6 @@
           </div>
         </div>
       </footer>
-      <script src="../js/app.js"></script>
+      <script src="{% static 'css/js/app.js' %}"></script>
     </body>
   </html>
