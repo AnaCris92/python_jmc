@@ -1,14 +1,13 @@
 from django.urls import path
-from .views import index, empresa, mantenimiento, sWeb, menuAspel, login
+from .views import index
 
 #vistas
 from . import views
 urlpatterns = [
     path('',views.index, name='index'),
-    path('', index, name='index'),
-    path('empresa/', empresa, name='empresa'),
-    path('mantenimiento/', mantenimiento, name='mantenimiento'),
-    path('sWeb/', sWeb, name='sWeb'),
-    path('menuAspel/', menuAspel, name='menuAspel'),
-    path('login/', login, name='login'),
+    path('empresa/', views.empresa, name='empresa'),
+    path('mantenimiento/',views. mantenimiento, name='mantenimiento'),
+    path('sWeb/',views. sWeb, name='sWeb'),
+    path('menuAspel/',views. menuAspel, name='menuAspel'),
+    path('login/', views.login, name='login'),
 ]
