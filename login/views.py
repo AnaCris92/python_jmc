@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -13,7 +14,7 @@ def mantenimiento(request):
 
 def menuAspel(request):
     return render(request, "menuAspel.html")
-
+@login_required
 def login(request):
     return render(request,"login.html")
 

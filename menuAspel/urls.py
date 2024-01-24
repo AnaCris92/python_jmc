@@ -1,10 +1,9 @@
 from django.urls import path
-from .views import sae,coi,noi,adm,caja,prod,facture,banco
+from .views import menuAspel,sae,coi,noi,adm,caja,prod,facture,banco
 
 #vistas
-from . import views
 urlpatterns = [
-    path('',views.menuAspel, name= 'menuAspel'),
+    path('',menuAspel, name= 'menuAspel'),
     path('adm/',adm, name= 'adm'),
     path('sae/',sae, name='sae'),
     path('coi/',coi, name='coi'),
