@@ -1730,3 +1730,498 @@ header .menu-top__link img {
   box-shadow: 3px 3px 3px #888888;
   border: 1px solid rgba(128, 128, 128, 0.363)
 }
+.aspel a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  font-size: 1.6rem;
+  color: #666666d9 !important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.aspel a p {
+  border: 1px solid #17acc9;
+  padding: 3px 4px;
+  border-radius: 8px;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+  box-shadow: 5px 5px 10px #888888
+}
+
+.aspel .info {
+  padding: 1rem
+}
+
+.aspel .info img {
+  width: 100px;
+  margin-left: 20px
+}
+
+.aspel .info h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 10px 0
+}
+
+.aspel .info p {
+  font-size: 1.4rem;
+  color: #666666d9;
+  padding: 1rem;
+  border: 1px solid #17acc9 0.9
+}
+
+.aspel .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.aspel .logos__SAE {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__SAE img {
+  width: 80px;
+  height: auto
+}
+
+.aspel .logos__COI {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__COI img {
+  width: 80px;
+  height: auto
+}
+
+.aspel .logos__NOI {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__NOI img {
+  width: 95px;
+  height: auto
+}
+
+.aspel .logos__CAJA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__CAJA img {
+  width: 80px;
+  height: auto
+}
+
+.aspel .logos__ADM {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__ADM img {
+  width: 75px;
+  height: 80px
+}
+
+.aspel .logos__FACTURE {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__FACTURE img {
+  width: 87px;
+  height: auto
+}
+
+.aspel .logos__PROD {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__PROD img {
+  width: 85px;
+  height: auto
+}
+
+.aspel .logos__BANCO {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 10px
+}
+
+.aspel .logos__BANCO img {
+  width: 88px;
+  height: auto
+}
+
+.mantenimiento .inicio {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url(./imagenes/mantenimiento.jpg);
+  opacity: 0.9;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 820px;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.mantenimiento .inicio__contenido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin: 10px
+}
+
+.mantenimiento .inicio__contenido-titulo1 {
+  background-color: rgba(91, 107, 126, 0.774);
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  font-size: 2.5rem
+}
+
+.mantenimiento .inicio__contenido-titulo1 h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center
+}
+
+.mantenimiento .inicio__contenido-titulo2 {
+  background-color: rgba(91, 107, 126, 0.774);
+  width: 100%;
+  padding: 15px;
+  border-radius: 0px 20px 0px 20px;
+  font-size: 2.5rem
+}
+
+.mantenimiento .inicio__contenido-titulo2 h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center
+}
+
+.mantenimiento .desarrollo__contenido img {
+  width: 100px;
+  height: auto;
+  bottom: 60px;
+  right: 90px
+}
+
+.mantenimiento .desarrollo__contenido-titulo h2 {
+  margin: 30px;
+  border-top: 2px solid #17acc9;
+  border-bottom: 2px solid #17acc9;
+  padding: 5px 0px
+}
+
+.mantenimiento .desarrollo__contenido__op {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.mantenimiento .desarrollo__contenido__op__prof {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(./imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.mantenimiento .desarrollo__contenido__op__prof-txt {
+  margin: 5px;
+  padding: 10px
+}
+
+.mantenimiento .desarrollo__contenido__op__prof-txt h2 {
+  font-size: 1.6rem;
+  text-align: left;
+  border-bottom: 1px solid #17acc9
+}
+
+.mantenimiento .desarrollo__contenido__op__prof-txt p {
+  font-size: 1.2rem;
+  text-align: left;
+  width: 180px
+}
+
+.mantenimiento .desarrollo__contenido__op__exp {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(./imagenes/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.mantenimiento .desarrollo__contenido__op__exp-txt {
+  margin: 5px;
+  padding: 10px
+}
+
+.mantenimiento .desarrollo__contenido__op__exp-txt h2 {
+  font-size: 1.6rem;
+  text-align: right;
+  border-bottom: 1px solid #17acc9
+}
+
+.mantenimiento .desarrollo__contenido__op__exp-txt p {
+  font-size: 1.2rem;
+  text-align: right;
+  width: 180px
+}
+
+.mantenimiento .desarrollo__contenido__op__dist {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(./imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.mantenimiento .desarrollo__contenido__op__dist-txt {
+  margin: 5px;
+  padding: 10px
+}
+
+.mantenimiento .desarrollo__contenido__op__dist-txt h2 {
+  font-size: 1.6rem;
+  text-align: left;
+  border-bottom: 1px solid #17acc9
+}
+
+.mantenimiento .desarrollo__contenido__op__dist-txt p {
+  font-size: 1.2rem;
+  text-align: left;
+  width: 180px
+}
+
+.mantenimiento .desarrollo__contenido__op__conf {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(./imagenes/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.mantenimiento .desarrollo__contenido__op__conf-txt {
+  margin: 5px;
+  padding: 10px
+}
+
+.mantenimiento .desarrollo__contenido__op__conf-txt h2 {
+  font-size: 1.6rem;
+  text-align: right;
+  border-bottom: 1px solid #17acc9
+}
+
+.mantenimiento .desarrollo__contenido__op__conf-txt p {
+  font-size: 1.2rem;
+  text-align: right;
+  width: 180px
+}
+
+.mantenimiento .desarrollo__contenido__op__solutions {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(./imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.mantenimiento .desarrollo__contenido__op__solutions-txt {
+  margin: 5px;
+  padding: 10px
+}
+
+.mantenimiento .desarrollo__contenido__op__solutions-txt h2 {
+  font-size: 1.6rem;
+  text-align: left;
+  border-bottom: 1px solid #17acc9
+}
+
+.mantenimiento .desarrollo__contenido__op__solutions-txt p {
+  font-size: 1.2rem;
+  text-align: left;
+  width: 180px
+}
