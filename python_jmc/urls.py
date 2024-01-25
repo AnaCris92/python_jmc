@@ -22,7 +22,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+     path('admin/', admin.site.urls),
     path('',include('index.urls')),
     path('empresa/',include('empresa.urls')),
     path('mantenimiento/',include('mantenimiento.urls')),
@@ -31,7 +31,6 @@ urlpatterns = [
     path('login/',include('login.urls')),
     path('inicioAdmin/',include('inicioAdmin.urls')),
     path('inicio_cliente/',include('inicio_cliente.urls')),
-    path('accounts/',include('django.contrib.auth.urls')),
 ]
 # Configuración para servir archivos multimedia en modo de desarrollo
 if settings.DEBUG:

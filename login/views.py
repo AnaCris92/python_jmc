@@ -1,22 +1,7 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def index(request):
-    return render(request,"index.html")
-
-def empresa(request):
-    return render(request, "empresa.html")
-
-def mantenimiento(request):
-    return render(request, "mantenimiento.html")
-
-def menuAspel(request):
-    return render(request, "menuAspel.html")
-@login_required
-def login(request):
-    return render(request,"login.html")
 
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -36,12 +21,12 @@ def login_user(request):
             login(request, user)
             if user.is_staff and user.is_superuser:
                 # El usuario es miembro del grupo "Administrator"
-                print("Redireccionando a 'controlClientes' para administrador")
-                return redirect('controlClientes')
+                print("Redireccionando a 'control_clientes' para administrador")
+                return redirect('control_clientes')
             else:
                 # El usuario no es administrador, redirigir a la página de clientes
-                print("Redireccionando a 'equipoClientes' para no administrador")
-                return redirect('equipoCliente')
+                print("Redireccionando a 'equipo_cliente' para no administrador")
+                return redirect('equipo_cliente')
         else:
             # El usuario no es autenticado, mostrar un mensaje de error
             messages.error(request, 'El nombre de usuario o contraseña no son correctos.')

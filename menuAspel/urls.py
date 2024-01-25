@@ -1,15 +1,16 @@
 from django.urls import path
-from .views import menuAspel,sae,coi,noi,adm,caja,prod,facture,banco
 
 #vistas
+from . import views
+
 urlpatterns = [
-    path('',menuAspel, name= 'menuAspel'),
-    path('adm/',adm, name= 'adm'),
-    path('sae/',sae, name='sae'),
-    path('coi/',coi, name='coi'),
-    path('noi/',noi, name='noi'),
-    path('caja/',caja, name='caja'),
-    path('prod/',prod, name='prod'),
-    path('facture/',facture, name='facture'),
-    path('banco/',banco, name='banco'),
+    path('',views.menuAspel, name= 'menuAspel'),
+    path('adm/',views.adm, name= 'adm'),
+    path('sae/',views.sae, name='sae'),
+    path('coi/',views.coi, name='coi'),
+    path('noi/',views.noi, name='noi'),
+    path('caja/',views.caja, name='caja'),
+    path('prod/',views.prod, name='prod'),
+    path('facture/',views.facture, name='facture'),
+    path('banco/',views.banco, name='banco'),
 ]
