@@ -1643,7 +1643,7 @@ header .menu-top__link img {
 }
 
 .sWeb .desarrollo__tienda img {
-  width: 200px;
+  width: 200px !important;
   height: 160px;
   border-radius: 0 15px 0 15px;
   display: -webkit-box;
@@ -1665,7 +1665,7 @@ header .menu-top__link img {
   color: #666666d9;
   text-align: center;
   margin: auto;
-  line-height: 30px 
+  line-height: 30px
 }
 
 .sWeb .desarrollo__informatico {
