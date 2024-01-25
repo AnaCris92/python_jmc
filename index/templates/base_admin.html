@@ -1,6 +1,6 @@
+{% load static%}
 <!DOCTYPE html >
 <html> 
-  {% load static %}
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/tablet.css' %}" media="screen and (min-width: 768px)"/>
     <link rel="stylesheet" href="{% static 'css/desktop.css' %}" media="screen and (min-width: 1024px)"/>
     <link rel="stylesheet" href="{% static 'css/menu.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/animations.css' %}"/>
-    <link rel="shortcut icon" href="{% static 'images/favIcon1.png' %}"/>
+    <link rel="shortcut icon" href="images/favIcon.png"/>
     <!-- Bootstrap y dependencias-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <!-- jQuery y Bootstrap Bundle-->
@@ -26,31 +25,32 @@
     <!--iconos-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
-    
   </head>
   <body> 
     <header>
-      <div class="menu-top"> <a class="menu-top__link" href="{% url 'logout' %}">Cerrar Sesión </a></div>
+      <div class="menu-top"> <a class="menu-top__link" href="{% url 'login' %}">Cerrar Sesión </a></div>
       <nav class="menu"> 
-        <section class="menu__container"> <a href="{% url 'inicioAdmin' %}"><img class="menu__logo" src="{% static 'Images/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
+        <section class="menu__container"> <a href="{%  url 'inicioAdmin' %}"><img class="menu__logo" src="{% static 'css/imagenes/logo.png' %}" alt="Logo de la empresa" id="logo"/></a>
           <ul class="menu__links">
             <li class="menu__item"><a class="menu__link" href="{% url 'inicioAdmin' %}">Inicio</a></li>
-            
+            <li class="menu__item"><a class="menu__link" href="{% url 'contratos_cliente' %}">Contratos</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'pagos_cliente'%}">Pagos</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'tickets_cliente' %}">Tickets </a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'equipo_cliente' %}">Equipos</a></li>
           </ul>
-          <div class="menu__hamburger"><img class="menu__img" src="{% static 'Images/menu.svg' %}" alt="icono de menu" id="menu"/></div>
+          <div class="menu__hamburger"><img class="menu__img" src="{% static 'css/imagenes/menu.svg' %}" alt="icono de menu" id="menu"/></div>
         </section>
       </nav>
-      <div class="controlMenuAdmin"> 
-        <div class="controlMenuAdmin__box">
-          <div class="controlMenuAdmin__box__item"><a href="{% url 'listar' %}">Clientes<img src="{% static '/Images/Icons/clientes.svg' %}" alt=""/></a></div>
-          <div class="controlMenuAdmin__box__item"> <a href="{% url 'controlSoporte' %}">Soporte<img src="{% static '/Images/Icons/soporte.svg' %}" alt=""/></a></div>
-          <div class="controlMenuAdmin__box__item"><a href="{% url 'controlPagos' %}">Pagos<img src="{% static '/Images/Icons/pagos.svg' %}" alt=""/></a></div>
-          <div class="controlMenuAdmin__box__item"><a href="{% url 'controlContratos' %}">Contratos<img src="{% static '/Images/Icons/contratos.svg' %}" alt=""/></a></div>
-          <div class="controlMenuAdmin__box__item"><a href="{% url 'listar_servicio' %}">Ajustes<img src="{% static '/Images/Icons/ajustes.svg' %}" alt=""/></a></div>
-        </div>
-      </div>
     </header>
+    <div class="controlMenuAdmin"> 
+      <div class="controlMenuAdmin__box">
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_clientes' %}'">Clientes<img src="{% static 'css/Images/Icons/clientes.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"> <a href="{% url 'control_soporte' %}">Soporte<img src="{% static 'css/Images/Icons/soporte.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_pagos' %}">Pagos<img src="{% static 'css/Images/Icons/pagos.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_contratos' %}">Contratos<img src="{% static 'css/Images/Icons/contratos.svg' %}" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="{% url 'control_ajuste' %}">Ajustes<img src="{% static 'css/Images/Icons/ajustes.svg' %}" alt=""/></a></div>
+      </div>
+    </div>
     {% block content %}
 
     {% endblock %}
@@ -59,11 +59,11 @@
         <div class="footer__box__body">
           <h2>JMC Soluciones</h2>
           <div class="footer__box__body__logo"> 
-            <div class="footer__box__body__logo-img"> <img src="{% static '/Images/Icons/jmc.svg' %}" alt="LogoJMC" id="logoJMC"/></div>
+            <div class="footer__box__body__logo-img"> <img src="{% static 'css/Images/Icons/jmc.svg' %}" alt="LogoJMC" id="logoJMC"/></div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="{% static './js/app.js' %}"></script>
+    <script src="{% static 'css/js/app.js' %}"></script>
   </body>
 </html>
