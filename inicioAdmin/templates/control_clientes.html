@@ -3,7 +3,6 @@
 {% block content %}
 <div class="content__CtrlClientes">
   <h3 class="title">Control de clientes</h3>
-
   <button class="btn btn-secondary newBtnElement" type="button" data-bs-toggle="modal"
     data-bs-target="#modalNvoCliente">Nuevo</button><br><br>
   <div class="modal-nuevo-cliente">
@@ -125,8 +124,10 @@
               data-id="{{ cliente.id_cliente }}" data-bs-target="#modalEditar" title="Modificar"> <i
                 class="bi bi-pencil-square"></i></a>
             <a href="{% url 'eliminar_cliente' cliente.id_cliente %}" data-bs-toggle="modal"
-              data-bs-target="#modalEliminar" data-id="{{ cliente.id_cliente }}" title="Eliminar"> <i
-                class="bi bi-trash3-fill"></i></a></td>
+              data-bs-target="#modalEliminar" data-id="{{ cliente.id_cliente }}" title="Eliminar">
+            <button class="btn btn-link newBtnElement btn-danger" type="submit" data-toggle="modal" data-target="#modalEliminar">Eliminar</button>
+              <i class="bi bi-trash3-fill"></i></a></td>
+                
         </tr>
         {% endfor %}
         <div class="modal-modificar-cliente">
@@ -279,7 +280,8 @@
       </script>
     </table>
   </div>
-  <button class="btn btn-exit" onclick="paginaInicio()" id="salir">Salir</button>
+<button class="btn btn-exit" onclick="salir()">Salir</button>
+<script src="{% static 'css/js/salir.js' %}"></script>
 </div>
 </div>
 </div>

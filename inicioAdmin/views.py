@@ -39,8 +39,8 @@ from .forms import ClienteForm #traer el formulario de cliente de la app
 from django.contrib import messages#se utiliza para mostrar mensajes
 from .models import Cliente #importa el modelo de cliente de la app
 from django.shortcuts import render, get_object_or_404, redirect  #indica que va a recuperar un argumento y va a devolver un httpresponse
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse #es una clase que facilita la creación de respuestas HTTP con contenido JSON.Puedes usarla para devolver respuestas JSON desde tus vistas en lugar de HTML, por ejemplo, en respuestas a solicitudes AJAX o API
+from django.views.decorators.csrf import csrf_exempt # es una medida de seguridad en Django para proteger contra ataques CSRF.csrf_exempt es un decorador que puedes aplicar a una vista para desactivar la protección CSRF para esa vista en particular.Esto puede ser útil en situaciones donde estás construyendo una API y necesitas permitir solicitudes desde clientes que no pueden manejar el CSRF token.
 
 
 def create_cliente(request):
