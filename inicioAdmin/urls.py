@@ -1,10 +1,14 @@
 from django.urls import path
-from .views import control_clientes, control_contratos, control_soporte, control_ajuste, equipo_cliente,tickets_cliente,contratos_cliente,pagos_cliente, control_staff
+from django.contrib.auth.decorators import login_required #que sea necesario iniciar sesion
 
 
 #vistas
 from . import views
 urlpatterns = [
+    path('create',views.create_cliente, name='create'),
+    path('listar', login_required (views.listar_cliente), name='listar'),
+    path('editar_cliente/<int:id_cliente>', login_required (views.update_cliente), name='editar_cliente'),
+    path('eliminar/<int:id_cliente>', views.delete_cliente, name='eliminar_cliente'),
     path('',views.inicioAdmin, name='inicioAdmin'),
     path('control_clientes/',views.control_clientes, name= 'control_clientes'),
     path('control_contratos/',views.control_contratos, name= 'control_contratos'),
