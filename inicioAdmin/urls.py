@@ -5,10 +5,17 @@ from django.contrib.auth.decorators import login_required #que sea necesario ini
 #vistas
 from . import views
 urlpatterns = [
+    #  CRUD cliente
     path('create',views.create_cliente, name='create'),
     path('listar', login_required (views.listar_cliente), name='listar'),
     path('editar_cliente/<int:id_cliente>', login_required (views.update_cliente), name='editar_cliente'),
     path('eliminar/<int:id_cliente>', views.delete_cliente, name='eliminar_cliente'),
+#  CRUD 
+    path('create_servicio',views.create_servicio, name='create_servicio'),
+    path('listar_servicio', login_required (views.listar_servicio), name='listar_servicio'),
+    path('editar_servicio/<int:id_servicio>', login_required (views.update_servicio), name='editar_servicio'),
+    path('eliminar/<int:id_servicio>', views.delete_servicio, name='eliminar_servicio'),
+
     path('',views.inicioAdmin, name='inicioAdmin'),
     path('control_clientes/',views.control_clientes, name= 'control_clientes'),
     path('control_contratos/',views.control_contratos, name= 'control_contratos'),
