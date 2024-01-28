@@ -161,3 +161,63 @@ def delete_servicio(request, id_servicio):
     else:
         return JsonResponse({'error': 'Método no permitido'}, status=403)
 #get_object_or_404 devueove un objeto o genra una excepcion
+    
+    from django.shortcuts import render #funciones de django
+from .forms import SoporteForm #traer el formulario de Soporte de la app
+from django.contrib import messages#se utiliza para mostrar mensajes
+from .models import Soporte #importa el modelo de Soporte de la app
+from django.shortcuts import render, get_object_or_404, redirect  #indica que va a recuperar un argumento y va a devolver un httpresponse
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+
+def create_soporte(request):
+    if request.method == 'POST':
+        form = SoporteForm(request.POST)  # Vincula el formulario con los datos POST
+        if form.is_valid():
+            form.save() # Guarda los datos en la base de datos
+            messages.success(request, 'Soporte creado con exito.') # Muestra un mensaje de éxito
+            return redirect('listar_soporte') # Redirige a la página de listado de los servicio
+        else:
+            messages.error(request, 'Error al insertar datos. Revise los datos.')
+            messages.error(request, form.errors)  # Agrega mensajes de error detallados
+    else:
+        form = SoporteForm()  # Crea un objeto vacío 
+    return render(request, 'control_soporte.html', {'form': form})# Renderiza la plantilla HTML con el formulario
+
+#funcion para mostrar la lista de los servicios
+def listar_soporte(request): #hacemos la solicitud al servidor con la funcion request
+    soportes = Soporte.objects.all() #mostramos los servicio almacenaso en la base de datos
+    return render (request, "control_soporte.html", {"soportes":soportes}) #respuesta del servidor en la pagina control-ajuste
+
+#funcion para actualizar o modificar los datos del servicio
+def update_soporte(request, id_soporte): #obtener los datos del soporte mediante el id
+    soporte = get_object_or_404(Soporte, id_soporte=id_soporte)
+    if request.method == 'POST': #revisa si la solicitud es post y puede enviar los nuevos datos
+        form = SoporteForm(request.POST, instance=soporte) #se crea el formulario para la validacion
+        if form.is_valid():
+            form.save()#si son validos se guardan 
+            data = {'message': 'Datos actualizados correctamente'} 
+            return redirect('listar_soporte') #se regresa al la pagina donde estan los servicios
+        else:
+            data = {'error': 'Error al actualizar datos. Revise los datos.'}
+            return JsonResponse(data)
+    else:
+        data = {
+            'nombre_soporte':soporte.nombre_soporte,
+        }
+        
+        return JsonResponse(data)#toma los datos almacenado y los envia  a donde se ralizo la solicitud
+
+@csrf_exempt # desactiva la protección CSRF para que se pueda eliminar registros
+def delete_soporte(request, id_soporte):
+    if request.method == 'POST':
+        try:
+            soporte = get_object_or_404(Soporte, id_soporte=id_soporte) 
+            soporte.delete()
+            return JsonResponse({'message': 'Soporte eliminado correctamente'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)#error en el servidor
+    else:
+        return JsonResponse({'error': 'Método no permitido'}, status=403)
+#get_object_or_404 devueove un objeto o genra una excepcion

@@ -25,7 +25,8 @@ class Cliente(models.Model):
         null=True,  # Puedes cambiar esto según tus requisitos
         blank=True,
     )
-
+    def __str__(self):
+        managed = True
 
     from django.db import models
 
@@ -38,4 +39,21 @@ class Servicio(models.Model):
 
     def __str__(self):
         managed = True
+
+class Soporte(models.Model):
+    fecha = models.DateField(verbose_name='Fecha del ticket', null=True, blank=True)
+    nombre = models.CharField(max_length=80, verbose_name='Nombre del cliente')
+    contrato = models.CharField(max_length=80, verbose_name='Contrato')
+    periodo = models.CharField(max_length=80, verbose_name='Periodo')
+    inicio = models.CharField(max_length=80, verbose_name='Inicio')
+    termino = models.CharField(max_length=80, verbose_name='Término')
+    rfc = models.CharField(max_length=13, verbose_name='RFC')
+    servicio = models.CharField(max_length=13, verbose_name='Servicio')
+    nom_contacto = models.CharField(max_length=50, verbose_name='Contacto')
+    mensaje = models.CharField(max_length=600, verbose_name='Asunto del ticket')
+    archivo = models.FileField(upload_to='ticket_archivos/', verbose_name='Archivo')
+
+    def __str__(self):
+        managed = True
+
     

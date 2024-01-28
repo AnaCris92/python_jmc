@@ -5,16 +5,22 @@ from django.contrib.auth.decorators import login_required #que sea necesario ini
 #vistas
 from . import views
 urlpatterns = [
-    #  CRUD cliente
+#  CRUD cliente
     path('create',views.create_cliente, name='create'),
     path('listar', login_required (views.listar_cliente), name='listar'),
     path('editar_cliente/<int:id_cliente>', login_required (views.update_cliente), name='editar_cliente'),
     path('eliminar/<int:id_cliente>', views.delete_cliente, name='eliminar_cliente'),
-#  CRUD 
+#  CRUD servicio
     path('create_servicio',views.create_servicio, name='create_servicio'),
     path('listar_servicio', login_required (views.listar_servicio), name='listar_servicio'),
     path('editar_servicio/<int:id_servicio>', login_required (views.update_servicio), name='editar_servicio'),
     path('eliminar/<int:id_servicio>', views.delete_servicio, name='eliminar_servicio'),
+
+#   CRUD Soporte
+    path('create_soporte',views.create_soporte, name='create_soporte'),
+    path('listar_soporte', login_required (views.listar_soporte), name='listar_soporte'),
+    path('editar_soporte/<int:id_soporte>', login_required (views.update_soporte), name='editar_soporte'),
+    path('eliminar/<int:id_soporte>', views.delete_soporte, name='eliminar_soporte'),
 
     path('',views.inicioAdmin, name='inicioAdmin'),
     path('control_clientes/',views.control_clientes, name= 'control_clientes'),
