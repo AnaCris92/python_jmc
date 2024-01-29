@@ -244,47 +244,47 @@
                                         <form action="#" id="editarSoporteForm" method="POST">
                                           {% csrf_token %}
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Fecha del tecket" type="date" name="fecha_ticket" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="Fecha del tecket" type="date"  id="fecha_ticket" name="fecha_ticket" required="required" readonly="readonly"/>
                                             <label class="form-label" for="fecha_ticket">Fecha</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Nombre del cliente" type="text" name="nombre" maxlength="80" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="Nombre del cliente" type="text" id="nombre" name="nombre" maxlength="80" required="required" readonly="readonly"/>
                                             <label class="form-label" for="nombre">Nombre del cliente</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Contrato" type="text" name="contrato" maxlength="80" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="Contrato" type="text" id="contrato" name="contrato" maxlength="80" required="required" readonly="readonly"/>
                                             <label class="form-label" for="nombre">Contrato</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="periodo" type="text" name="periodo" maxlength="80" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="periodo" type="text" id="periodo" name="periodo" maxlength="80" required="required" readonly="readonly"/>
                                             <label class="form-label" for="nombre">Periodo</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Inicio" type="text" name="Inicio" maxlength="80" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="Inicio" type="text" id="Inicio" name="Inicio" maxlength="80" required="required" readonly="readonly"/>
                                             <label class="form-label" for="nombre">Inicio</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="termino" type="text" name="termino" maxlength="80" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="termino" type="text"  id="termino" name="termino" maxlength="80" required="required" readonly="readonly"/>
                                             <label class="form-label" for="nombre">Término</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="RFC" type="text" name="rfc" maxlength="13" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="RFC" type="text" id="rfc" name="rfc" maxlength="13" required="required" readonly="readonly"/>
                                             <label class="form-label" for="rfc">RFC   </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="servicio" type="text" name="servicio" maxlength="13" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="servicio" type="text" id="servicio" name="servicio" maxlength="13" required="required" readonly="readonly"/>
                                             <label class="form-label" for="servicio">Servicio</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="contacto" type="text" name="nom_contacto" maxlength="50" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="contacto" type="text" id="nom_contacto" name="nom_contacto" maxlength="50" required="required" readonly="readonly"/>
                                             <label class="form-label" for="contacto">Contacto</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="asunto del ticket" type="text" name="mensaje" maxlength="600" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="asunto del ticket" type="text" id="mensaje" name="mensaje" maxlength="600" required="required" readonly="readonly"/>
                                             <label class="form-label" for="mensaje">Asunto</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="archivo del ticket" type="file" name="archivo" required="required" readonly="readonly"/>
+                                            <input class="form-control form-control-lg" placeholder="archivo del ticket" type="file" id="archivo" name="archivo" required="required" readonly="readonly"/>
                                             <label class="form-label" for="archivo">Archivo</label>
                                           </div>
                                         </form>
