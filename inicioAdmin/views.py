@@ -68,6 +68,9 @@ def update_cliente(request, id_cliente): #obtener los datos del cliente mediante
     if request.method == 'POST': #revisa si la solicitud es post y puede enviar los nuevos datos
         form = ClienteForm(request.POST, instance=cliente) #se crea el formulario para la validacion
         if form.is_valid():
+            cliente_instance = form.save(commit=False)
+            cliente_instance.save()
+
             form.save()#si son validos se guardan 
             data = {'message': 'Datos actualizados correctamente'} 
             return redirect('listar') #se regresa al la pagina donde estan los clientes
@@ -77,28 +80,21 @@ def update_cliente(request, id_cliente): #obtener los datos del cliente mediante
     else:
         data = {
             'nombre':cliente.nombre,
-            #'correo': cliente.correo,
-            #'direccion':cliente.direccion,
-            #'telefono': cliente.telefono,
-            #'rfc':cliente.rfc,
-            #'cp':cliente.cp,
-            #'municipio': cliente.municipio,
-            #'estado': cliente.estado,
-            #'nom_contacto': cliente.nom_contacto,
+            'correo': cliente.correo,
+            'direccion':cliente.direccion,
+            'telefono': cliente.telefono,
+            'rfc':cliente.rfc,
+            'cp':cliente.cp,
+            'estado': cliente.estado,
+            'nom_contacto': cliente.nom_contacto,
         }
         
         return JsonResponse(data)#toma los datos almacenado y los envia  a donde se ralizo la solicitud
 
 @csrf_exempt # desactiva la protección CSRF para que se pueda eliminar registros
 def delete_cliente(request, id_cliente):
-    if request.method == 'POST':
-        try:
-            cliente = get_object_or_404(Cliente, id_cliente=id_cliente) 
-            cliente.delete()
-            return JsonResponse({'message': 'Cliente eliminado correctamente'})
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)#error en el servidor
-    else:
+        Cliente= get_object_or_404(Cliente, id_cliente=id_cliente)
+        Cliente.delete()
         return JsonResponse({'error': 'Método no permitido'}, status=403)
 #get_object_or_404 devueove un objeto o genra una excepcion
     

@@ -31,6 +31,7 @@ urlpatterns = [
     path('login/',include('login.urls')),
     path('inicioAdmin/',include('inicioAdmin.urls')),
     path('inicio_cliente/',include('inicio_cliente.urls')),
+    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
 # Configuración para servir archivos multimedia en modo de desarrollo
 if settings.DEBUG:
