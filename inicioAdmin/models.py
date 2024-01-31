@@ -1,6 +1,7 @@
 #models.py
 from django.db import models
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import User
 
 class Cliente(models.Model):
     id_cliente = models.AutoField(primary_key=True)
@@ -40,20 +41,33 @@ class Servicio(models.Model):
     def __str__(self):
         managed = True
 
-class Soporte(models.Model):
-    fecha = models.DateField(verbose_name='Fecha del ticket', null=True, blank=True)
-    nombre = models.CharField(max_length=80, verbose_name='Nombre del cliente')
-    contrato = models.CharField(max_length=80, verbose_name='Contrato')
-    periodo = models.CharField(max_length=80, verbose_name='Periodo')
-    inicio = models.CharField(max_length=80, verbose_name='Inicio')
-    termino = models.CharField(max_length=80, verbose_name='Término')
-    rfc = models.CharField(max_length=13, verbose_name='RFC')
-    servicio = models.CharField(max_length=13, verbose_name='Servicio')
-    nom_contacto = models.CharField(max_length=50, verbose_name='Contacto')
-    mensaje = models.CharField(max_length=600, verbose_name='Asunto del ticket')
-    archivo = models.FileField(upload_to='ticket_archivos/', verbose_name='Archivo')
+class Equipo(models.Model):
+
+    TIPO_EQUIPO_CHOICES = [
+        ('ao', 'All in One'),
+        ('pc', 'Escritorio'),
+        ('lap', 'Laptop'),
+    ]
+
+    TIPO_DISCO_CHOICES = [
+        ('hdd', 'HDD'),
+        ('ssd', 'SSD'),
+    ]
+
+    tipo_equipo = models.CharField(max_length=20, choices=TIPO_EQUIPO_CHOICES, default='no')
+    marca = models.CharField(max_length=50)
+    ram = models.CharField(max_length=10)
+    procesador = models.CharField(max_length=50)
+    tipo_disco = models.CharField(max_length=3, choices=TIPO_DISCO_CHOICES, default='no')
+    uso_disco = models.CharField(max_length=15, blank=True, null=True)
+    ip_local = models.CharField(max_length=15)
+    anydesk = models.CharField(max_length=12)
+    nom_usuario = models.CharField(max_length=50)
+    nom_antivirus = models.CharField(max_length=20)
+    vig_antivirus = models.DateField()
+    office = models.CharField(max_length=30)
+    vig_office = models.DateField()
+    descripcion = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        managed = True
-
-    
+        return f"{self.tipo_equipo} - {self.marca} - {self.nom_usuario}"

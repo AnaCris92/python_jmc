@@ -1,8 +1,8 @@
 #forms de cliente
 from django import forms
 from django.forms import ModelForm
-from .models import Cliente,Servicio,Soporte
-
+from .models import Cliente,Servicio,Equipo
+#forms
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -19,10 +19,8 @@ class ServicioForm(forms.ModelForm):
         fields = ["id_servicio","nombre_servicio","descripcion","costo", "plan",]
 #el formulario va dependiendo los campops del modelo y los formularios usados en los modales
         #nita: respetar el orden para que funcione
-from django import forms
-from .models import Soporte
-
-class SoporteForm(forms.ModelForm):
+  # forms de equipo      
+class EquipoForm(forms.ModelForm):
     class Meta:
-        model = Soporte
-        fields = ['fecha', 'nombre', 'contrato', 'periodo', 'inicio', 'termino', 'rfc', 'servicio', 'nom_contacto', 'mensaje', 'archivo']
+        model = Equipo
+        fields = ['tipo_equipo', 'marca', 'ram', 'procesador', 'tipo_disco', 'uso_disco', 'ip_local', 'anydesk', 'nom_usuario', 'nom_antivirus', 'vig_antivirus','office','vig_office','descripcion']

@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <div class="ctrlSoporte">
-        <h3 class="title">Control tickets generales</h3>
+        <h3 class="title">Equipos</h3>
         <button class="btn btn-secondary newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalNvoTicket">Nuevo</button>        <div class="modal-soporte">
           <div class="modal" id="modalNvoTicket" aria-hidden="true" aria-labelledby="modalNvoTicketLabel" tabindex="-1">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -10,17 +10,19 @@
                 <div class="modal-header">
                   <h2 class="modal-title" id="modalNvoTicketLabel">Añadir nuevo <strong>Equipo</strong></h2>
                   <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div id="mensajeExito" class="alert alert-success" style="display: none;">
+                    Datos enviados con éxito!
                 </div>
-                <!-------------modal para crear soporte--------------------------->
+              </div>
+                <!-------------modal para crear equipo--------------------------->
                 <!---agregar el id a todas las etiquetas e input -------->
-                <!-----name= es el nombre del campo de la base de datos-->
                 <div class="modal-body">
                   <div class="content-form">
-                    <form method="POST" action="{% url 'create_soporte' %}">
+                    <form method="POST" action="{% url 'create_equipo' %}">
                       {% csrf_token %} <!---verifica que es intencional el formulario y no un ataque malisioso-->
                       <div class="form-floating mb-3"> 
                         <label for="tipo">Tipo de equipo:</label>
-                        <select class="form-select" id="opcionesSelect">
+                        <select class="form-select" id="tipo">
                           <option value="no"> </option>
                           <option value="ao">All in One </option>
                           <option value="pc">Escritorio </option>
@@ -41,19 +43,19 @@
                       </div>
                       <div class="form-floating mb-3">
                         <label for="tipo">Tipo de Disco Duro:</label>
-                        <select class="form-select" id="opcionesSelect1">
+                        <select class="form-select" id="opcionesSelect1" >
                           <option value="no"> </option>
                           <option value="hdd">HDD</option>
                           <option value="ssd">SSD</option>
                         </select>
                       </div>
                       <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Uso del disco duro" type="text" id="uso" name="uso" maxlength="15"/>
-                        <label class="form-label" for="uso">Uso del disco duro</label>
+                        <input class="form-control form-control-lg" placeholder="Uso del disco duro" type="text" id="uso_disco" name="uso_disco" maxlength="15"/>
+                        <label class="form-label" for="uso_disco">Uso del disco duro</label>
                       </div>
                       <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="ip local" type="text" id="ip" name="ip" maxlength="15" required="required"/>
-                        <label class="form-label" for="ip">Ip local </label>
+                        <input class="form-control form-control-lg" placeholder="ip local" type="text" id="ip_local" name="ip_local" maxlength="15" required="required"/>
+                        <label class="form-label" for="ip_local">Ip local </label>
                       </div>
                       <div class="form-floating mb-3">
                         <input class="form-control form-control-lg" placeholder="Direccion anydesk" type="text"  id="anydesk"  name="anydesk" maxlength="12" required="required"/>
@@ -97,7 +99,7 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="modalTicket">Nuevo Ticket </h3>
+                  <h3 class="modal-title" id="modalTicket">Nuevo Equipo </h3>
                   <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">Ticket creado!</div>
@@ -109,113 +111,10 @@
             </div>
           </div>
         </div>
-        <div class="modal-soporte">
-          <div class="modal" id="modalModificarTicket" aria-hidden="true" aria-labelledby="modalDetalleTicketLabel" tabindex="-1">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title" id="modalModificarTicketLabel">Modificar <strong>Ticket</strong></h2>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="content-form">
-                    <form action="">
-                      {% csrf_token %}
-                      <div class="form-floating mb-3"> 
-                        <label for="tipo">Tipo de equipo:</label>
-                        <select class="form-select" id="opcionesSelect2">
-                          <option value="no"> </option>
-                          <option value="ao">All in One </option>
-                          <option value="pc">Escritorio </option>
-                          <option value="lap">Laptop </option>
-                        </select>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Marca del equipo" type="text" id="marca2" name="marca" maxlength="50" required="required"/>
-                        <label class="form-label" for="marca">Marca</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Memoria RAM" type="text" name="ram" maxlength="10" required="required"/>
-                        <label class="form-label" for="ram">RAM  </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Procesador" type="text" name="procesador" maxlength="50" required="required"/>
-                        <label class="form-label" for="procesador">Procesador   </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <label for="tipo">Tipo de Disco Duro:</label>
-                        <select class="form-select" id="opcionesSelect">
-                          <option value="no"> </option>
-                          <option value="hdd">HDD</option>
-                          <option value="ssd">SSD</option>
-                        </select>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Uso del disco duro" type="text" name="uso" maxlength="15"/>
-                        <label class="form-label" for="uso">Uso del disco duro</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="ip local" type="text" name="ip" maxlength="15" required="required"/>
-                        <label class="form-label" for="ip">Ip local </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Direccion anydesk" type="text" name="anydesk" maxlength="12" required="required"/>
-                        <label class="form-label" for="anydesk">Direccion Anydesk</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Nombre de usuario" type="text" name="nom_usuario" maxlength="50" required="required"/>
-                        <label class="form-label" for="nom_usuario">Nombre de  usuario del equipo </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Antivirus" type="text" name="nom_antivirus" maxlength="20" required="required"/>
-                        <label class="form-label" for="nom_antivirus">Nombre del antivirus </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Vigencia del Antivirus" type="month" name="vig_antivirus" maxlength="20" required="required"/>
-                        <label class="form-label" for="vig_antivirus">Vigencia del antivirus</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Paqueteria Office" type="text" name="office" maxlength="30" required="required"/>
-                        <label class="form-label" for="office">Paqueteria Office </label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Vigencia Office" type="month" name="vig_office" maxlength="20" required="required"/>
-                        <label class="form-label" for="vig_office">Vigencia de la Paqueteria Office</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" placeholder="Descripcion" type="text" name="descripcion" maxlength="600"/>
-                        <label class="form-label" for="descripcion">Descripcion</label>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-body__buttons"> 
-                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                    <button class="btn btn-success" data-bs-target="#modalModificar" data-bs-toggle="modal" data-bs-dismiss="modal">Guardar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="modalModificar" aria-hidden="true" aria-labelledby="modalModificar" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title" id="modalModificar">Modificar </h3>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">Ticket modificado!</div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#modalModificar" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
-                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="ctrlSoporte__tabs">
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="usuario-tab-pane" role="tabpanel" aria-labelledby="usuario-tab" tabindex="0"> 
-              <div class="ctrlSoporte__tabs__item">                           
+              <div class="ctrlSoporte__tabs__item">                  
                 <div class="ctrlSoporte__tabs__item__body">
                   <div class="table-wrapper content__ctrlSoporte__tabs__item__body__table">
                     <table class="display" id="myTable" cellspacing="0" width="100%">
@@ -230,27 +129,24 @@
                         </tr>
                       </thead>
                       <tbody> 
-                          {% for soporte in soportes %} <!---bucle de cliente en cliente---->
-                          <tr id="fila_id_{{soporte.id_soporte}}"><!---id para la fila de la tabla-->
+                          {% for equipo in equipos %} <!---bucle de cliente en cliente---->
+                          <tr id="fila_id_{{equipo.id_equipo}}"><!---id para la fila de la tabla-->
                             <!---se accede a los datos almacenados en la base de datos-->
-                            <td>{{ soporte.id_soporte}} </td>
-                            <td>{{ soporte.cliente}} </td>
-                            <td>{{ soporte.asunto}} </td>
-                            <td>{{ soporte.status}} </td>
+                            <td>{{ equipo.id_equipo}} </td>
+                            <td>{{ equipo.cliente}} </td>
+                            <td>{{ equipo.asunto}} </td>
+                            <td>{{ equipo.status}} </td>
                             <td>
                             <td>
-                            <a href="{% url 'editar_soporte' soporte.id_soporte %}" data-bs-toggle="modal"
-                              data-id="{{ soporte.id_soporte }}" data-bs-target="#modalEditarTicket" title="Modificar">
+                            <a href="{% url 'editar_equipo' equipo.id_equipo %}" data-bs-toggle="modal"data-id="{{ equipo.id_equipo }}" data-bs-target="#modalEditarTicket" title="Modificar">
                             <button class="btn btn-link newBtnElement" type="button">Ver mas ...</button></a>
-                          </td>
-                          <td> <a href="{% url 'editar_soporte' soporte.id_soporte %}" data-id="{{soporte.id_soporte }}"  data-bs-toggle="modal" data-bs-target="#modalEditar" title="Modificar">
-                            <i class="bi bi-pencil-square"></i></a></td>
-                         <td> <a href="{% url 'eliminar_soporte' soporte.id_soporte %}" data-id="{{soporte.id_soporte }}" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar"> 
-                           <i class="bi bi-trash3-fill"></i></a></td>
-                        </tr>
+                            </td>
+                            <td> <a href="{% url 'editar_equipo' equipo.id_equipo %}" data-id="{{equipo.id_equipo }}"  data-bs-toggle="modal" data-bs-target="#modalEditar" title="Modificar">   <i class="bi bi-pencil-square"></i></a></td>
+                            <td> <a href="{% url 'eliminar_equipo' equipo.id_equipo %}" data-id="{{equipo.id_equipo }}" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar">  <i class="bi bi-trash3-fill"></i></a></td>
+                          </tr>
                           {% endfor %}
-                            <div class="modal-soporte">
-                              <div class="modal" id="modalDetalleTicket" aria-hidden="true" aria-labelledby="modalDetalleTicketLabel" tabindex="-1">
+                            <div class="modal-equipo">
+                              <div class="modal" id="modalEditar" aria-hidden="true" aria-labelledby="modalDetalleTicketLabel" tabindex="-1">
                                 <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                   <div class="modal-content">
                                     <div class="modal-header">
@@ -259,11 +155,11 @@
                                     </div>
                                     <div class="modal-body">
                                       <div class="content-form">
-                                        <form action="#" id="editarSoporteForm" method="POST">
+                                        <form action="#" id="editarEquipoForm" method="POST">
                                           {% csrf_token %}
                                           <div class="form-floating mb-3"> 
-                                            <label for="tipo">Tipo de equipo:</label>
-                                            <select class="form-select" id="opcionesSelect">
+                                            <label for="tipo2">Tipo de equipo:</label>
+                                            <select class="form-select" id="tipo2">
                                               <option value="no"> </option>
                                               <option value="ao">All in One </option>
                                               <option value="pc">Escritorio </option>
@@ -271,118 +167,124 @@
                                             </select>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Marca del equipo" type="text" name="marca" maxlength="50" required="required"/>
-                                            <label class="form-label" for="marca">Marca</label>
+                                            <input class="form-control form-control-lg" placeholder="Marca del equipo" type="text" id="marca2" name="marca" maxlength="50" required="required"/>
+                                            <label class="form-label" for="marca2">Marca</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Memoria RAM" type="text" name="ram" maxlength="10" required="required"/>
-                                            <label class="form-label" for="ram">RAM  </label>
+                                            <input class="form-control form-control-lg" placeholder="Memoria RAM" type="text" id="ram2" name="ram" maxlength="10" required="required"/>
+                                            <label class="form-label" for="ram2">RAM  </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Procesador" type="text" name="procesador" maxlength="50" required="required"/>
-                                            <label class="form-label" for="procesador">Procesador   </label>
+                                            <input class="form-control form-control-lg" placeholder="Procesador" type="text" id="procesador2" name="procesador" maxlength="50" required="required"/>
+                                            <label class="form-label" for="procesador2">Procesador   </label>
                                           </div>
                                           <div class="form-floating mb-3">
                                             <label for="tipo">Tipo de Disco Duro:</label>
-                                            <select class="form-select" id="opcionesSelect">
+                                            <select class="form-select" id="opcionesSelect3">
                                               <option value="no"> </option>
                                               <option value="hdd">HDD</option>
                                               <option value="ssd">SSD</option>
                                             </select>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Uso del disco duro" type="text" name="uso" maxlength="15"/>
-                                            <label class="form-label" for="uso">Uso del disco duro</label>
+                                            <input class="form-control form-control-lg" placeholder="Uso del disco duro" type="text" id="uso_disco2" name="uso_disco" maxlength="15"/>
+                                            <label class="form-label" for="uso_disco2">Uso del disco duro</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="ip local" type="text" name="ip" maxlength="15" required="required"/>
-                                            <label class="form-label" for="ip">Ip local </label>
+                                            <input class="form-control form-control-lg" placeholder="ip local" type="text" id="ip_local2" name="ip_local" maxlength="15" required="required"/>
+                                            <label class="form-label" for="ip_local2">Ip local </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Direccion anydesk" type="text" name="anydesk" maxlength="12" required="required"/>
-                                            <label class="form-label" for="anydesk">Direccion Anydesk</label>
+                                            <input class="form-control form-control-lg" placeholder="Direccion anydesk" type="text" id="anydesk2" name="anydesk" maxlength="12" required="required"/>
+                                            <label class="form-label" for="anydesk2">Direccion Anydesk</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Nombre de usuario" type="text" name="nom_usuario" maxlength="50" required="required"/>
-                                            <label class="form-label" for="nom_usuario">Nombre de  usuario del equipo </label>
+                                            <input class="form-control form-control-lg" placeholder="Nombre de usuario" type="text" id="nom_usuario2" name="nom_usuario" maxlength="50" required="required"/>
+                                            <label class="form-label" for="nom_usuario2">Nombre de  usuario del equipo </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Antivirus" type="text" name="nom_antivirus" maxlength="20" required="required"/>
-                                            <label class="form-label" for="nom_antivirus">Nombre del antivirus </label>
+                                            <input class="form-control form-control-lg" placeholder="Antivirus" type="text" id="nom_antivirus2" name="nom_antivirus" maxlength="20" required="required"/>
+                                            <label class="form-label" for="nom_antivirus2">Nombre del antivirus </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Vigencia del Antivirus" type="month" name="vig_antivirus" maxlength="20" required="required"/>
-                                            <label class="form-label" for="vig_antivirus">Vigencia del antivirus</label>
+                                            <input class="form-control form-control-lg" placeholder="Vigencia del Antivirus" type="month" id="vig_antivirus2" name="vig_antivirus" maxlength="20" required="required"/>
+                                            <label class="form-label" for="vig_antivirus2">Vigencia del antivirus</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Paqueteria Office" type="text" name="office" maxlength="30" required="required"/>
-                                            <label class="form-label" for="office">Paqueteria Office </label>
+                                            <input class="form-control form-control-lg" placeholder="Paqueteria Office" type="text" id="office2" name="office" maxlength="30" required="required"/>
+                                            <label class="form-label" for="office2">Paqueteria Office </label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Vigencia Office" type="month" name="vig_office" maxlength="20" required="required"/>
-                                            <label class="form-label" for="vig_office">Vigencia de la Paqueteria Office</label>
+                                            <input class="form-control form-control-lg" placeholder="Vigencia Office" type="month" id="vig_office2" name="vig_office" maxlength="20" required="required"/>
+                                            <label class="form-label" for="vig_office2">Vigencia de la Paqueteria Office</label>
                                           </div>
                                           <div class="form-floating mb-3">
-                                            <input class="form-control form-control-lg" placeholder="Descripcion" type="text" name="descripcion" maxlength="600"/>
-                                            <label class="form-label" for="descripcion">Descripcion</label>
+                                            <input class="form-control form-control-lg" placeholder="Descripcion" type="text" id="descripcion2" name="descripcion" maxlength="600"/>
+                                            <label class="form-label" for="descripcion2">Descripcion</label>
                                           </div>
-                                        </form>
+                                       
                                       </div>
                                       <div class="modal-body__buttons"> 
                                         <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                                         <button class="btn btn-warning" data-bs-target="#modalModTick" data-bs-toggle="modal" data-bs-dismiss="modal">Modificar</button>
                                       </div>
+                                    </form>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="modal fade" id="modalModTick" aria-hidden="true" aria-labelledby="modalModTick" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h3 class="modal-title" id="modalDetalleT">Modificar </h3>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Ticket modificado!</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
-                                    </div>
+                              <div class="modal fade" id="modalEliminar" aria-hidden="true" aria-labelledby="modalEliminarLabel"
+                              tabindex="-1">
+                              <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="modalEliminarModalLabel">Eliminar</h5>
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">¿Estas seguro que desdeas eliminar?</div>
+                                  <div class="modal-footer">
+                                    <button class="btn btn-primary" data-bs-target="#modalEliminar" data-bs-toggle="modal"
+                                      data-bs-dismiss="modal">Cancelar </button>
+                                    <button id="confirmarEliminar" class="btn btn-secondary" type="button"
+                                      data-bs-dismiss="modal">Aceptar</button>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </td>
-                          <td><a class="edit" href="#modalModificarTicket" data-bs-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </tbody>
+                          </tbody>
           <script>
-            $(document).ready(function () {
-              $('#myTable').DataTable();
-            });
+                      
             $('a[data-bs-toggle="modal"]').on('click', function () {
               var targetModalId = $(this).data('bs-target');
-              var id_soporte = $(this).data('id');
+              var id_equipo = $(this).data('id');
     
               if (targetModalId === '#modalEliminar') {
                 $('#confirmarEliminar').data('id', id_cliente);
               } else {
                 $.ajax({
-                  url: '{% url "editar_soporte" id_soporte=0 %}'.replace('0', id_soporte),
+                  url: '{% url "editar_equipo" id_equipo=0 %}'.replace('0', id_equipo),
                   type: 'GET',
                   data: {
-                    'id_soporte': id_soporte
+                    'id_equipo': id_equipo
                   },
                   success: function (data) {
-                    $('#editarSoporteForm').attr('action', '{% url "editar_soporte" id_soporte=0 %}'.replace('0',
-                      id_soporte));
-                    $('#nombre2').val(data.nombre);
+                    $('#editarEquipoForm').attr('action', '{% url "editar_equipo" id_equipo=0 %}'.replace('0',
+                      id_equipo));
+                    $('#marca2').val(data.marca);
+                    $('#ram2').val(data.ram);
+                    $('#porcesador2').val(data.porcesador);
+                    $('#tipo_disco2').val(data.tipo_disco);
+                    $('#uso_disco2').val(data.uso_disco);
+                    $('#ip_local2').val(data.ip_local);
+                    $('#anydesk2').val(data.anydesk);
+                    $('#nom_usuario2').val(data.nom_usuario);
+                    $('#nom_antivirus2').val(data.nom_antivirus);
+                    $('#vig_antivirus2').val(data.vig_antivirus);
+                    $('#office2').val(data.office);
+                    $('#vig_office2').val(data.vig_office);
+                    $('#descripcion2').val(data.descripcion);
+
+                    
                   },
                   error: function (xhr, status, error) {
                     console.error('Error al cargar la información del registro:', error);
@@ -393,15 +295,15 @@
             });
     
             $('#confirmarEliminar').on('click', function () {
-              var id_soporte = $(this).data('id');
+              var id_equipo = $(this).data('id');
     
-              if (id_soporte !== undefined) {
+              if (id_equipo !== undefined) {
                 $.ajax({
-                  url: '{% url "eliminar_soporte" id_soporte=0 %}'.replace('0', id_soporte),
+                  url: '{% url "eliminar_equipo" id_equipo=0 %}'.replace('0', id_equipo),
                   type: 'POST',
                   dataType: 'json',
                   data: {
-                    'id_soporte': id_soporte
+                    'id_equipo': id_equipo
                   },
                   success: function (response) {
                     console.log('Respuesta del servidor:', response);
@@ -410,7 +312,7 @@
                     $('#modalEliminar').modal('hide');
                     // Eliminar la fila correspondiente de la tabla
                     var table = $('#myTable').DataTable();
-                    table.row('#fila_id_' + id_soporte).remove().draw();
+                    table.row('#fila_id_' + id_equipo).remove().draw();
                   },
                   error: function (xhr, status, error) {
                     console.error('Error al eliminar el registro:', error);
@@ -418,16 +320,15 @@
                   }
                 });
               } else {
-                console.error('ID de soporte no definido al intentar eliminar el registro.');
+                console.error('ID de equipo no definido al intentar eliminar el registro.');
                 alert('Error al eliminar el registro: ID no definido.');
               }
             });
+          
           </script>
         </table>
       </div>
-    <button class="btn btn-exit" onclick="salir()">Salir</button>
-    <script src="{% static 'css/js/salir.js' %}"></script>
-    </div>
+      <button class="btn btn-exit" onclick="salir()">Salir</button>    </div>
     </div>
     </div>
     

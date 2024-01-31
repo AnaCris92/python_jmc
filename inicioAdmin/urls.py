@@ -16,11 +16,11 @@ urlpatterns = [
     path('editar_servicio/<int:id_servicio>', login_required (views.update_servicio), name='editar_servicio'),
     path('eliminar/<int:id_servicio>', views.delete_servicio, name='eliminar_servicio'),
 
-#   CRUD Soporte
-    path('create_soporte',views.create_soporte, name='create_soporte'),
-    path('listar_soporte', login_required (views.listar_soporte), name='listar_soporte'),
-    path('editar_soporte/<int:id_soporte>', login_required (views.update_soporte), name='editar_soporte'),
-    path('eliminar/<int:id_soporte>', views.delete_soporte, name='eliminar_soporte'),
+#   CRUD Equipo
+    path('create_equipo',views.create_equipo, name='create_equipo'),
+    path('listar_equipo', login_required (views.listar_equipo), name='listar_equipo'),
+    path('editar_equipo/<int:id_equipo>', login_required (views.update_equipo), name='editar_equipo'),
+    path('eliminar/<int:id_equipo>', views.delete_equipo, name='eliminar_equipo'),
 
     path('',views.inicioAdmin, name='inicioAdmin'),
     path('control_clientes/',views.control_clientes, name= 'control_clientes'),
